@@ -1000,6 +1000,15 @@ body.dark-theme .qualification__img {
   background: inherit;
 }
 
+.contact__form-input:focus,
+.contact__form-textarea:focus,
+.contact__form-input:active,
+.contact__form-textarea:active,
+.contact__form-input:focus-visible,
+.contact__form-textarea:focus-visible  {
+  color: inherit !important;
+  background: inherit !important;
+}
 .contact__form-area {
   height: 7rem;
 }

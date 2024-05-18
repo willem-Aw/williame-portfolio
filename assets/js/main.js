@@ -1,8 +1,8 @@
-// (function () {
-//     emailjs.init({
-//         publicKey: "Vp1AX-aslbvjjPVe5",
-//     });
-// })();
+(function () {
+    emailjs.init({
+        publicKey: "Vp1AX-aslbvjjPVe5",
+    });
+})();
 
 /**show menu  */
 const navMenu = document.getElementById('nav-menu'),
@@ -83,7 +83,7 @@ function sendMail(e) {
                 report.innerText = ""
             }, 4000);
         }, (error) => {
-            alert('OOPS! Something went wrong!', error);
+            console.log('Something went wrong!' + error);
         })
 
         senderName.value = ''
