@@ -1333,7 +1333,7 @@ body.dark-theme {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .home__container {
     grid-template-columns: repeat(3, 1fr);
   }
