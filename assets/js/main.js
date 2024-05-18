@@ -143,7 +143,7 @@ setHeaderShadow()
 
 const qualification_element = document.querySelector('.qualification__container');
 const servicesCards = document.querySelectorAll('#services .services__card');
-const opacityObserver = new IntersectionObserver(entries => {
+const fadeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
@@ -152,12 +152,12 @@ const opacityObserver = new IntersectionObserver(entries => {
         }
     });
 }, {
-    threshold: 0.7,
+    threshold: 0.5,
 })
 
-opacityObserver.observe(qualification_element);
+fadeObserver.observe(qualification_element);
 for(servicesCard of servicesCards){
-    opacityObserver.observe(servicesCard);
+    fadeObserver.observe(servicesCard);
 }
 
 const skillContent = document.querySelector('#skills .skills__container');

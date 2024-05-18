@@ -10,7 +10,7 @@
   --body-font-familly: "Roboto Condensed", sans-serif;
   --title-font-familly: "Lora", serif;
   --extra-big-font-size: 3rem;
-  --big-font-size: 1.5rem;
+  --big-font-size: 1.75rem;
   --medium-font-size: 1.25rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.81rem;
@@ -216,7 +216,7 @@ img {
 }
 .nav__logo::after {
   bottom: 5px;
-  left: 5px;
+  left: 3px;
   width: 0;
   height: 0;
   border: 8px solid transparent;
@@ -819,6 +819,7 @@ body.dark-theme .qualification__img {
 }
 
 .project__content {
+  padding: 0 1rem;
   display: grid;
   justify-content: center;
 }
@@ -827,11 +828,19 @@ body.dark-theme .qualification__img {
   margin: 0 12px 0 0;
 }
 
+.product__img-container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
 .projets__img {
-  /* width: 250px; */
-  width: 95%;
-  border-radius: 0.75rem;
-  margin-bottom: 0.25rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: auto;
+  border-radius: 0.5rem;
 }
 
 .project__subtitle {
@@ -1249,22 +1258,16 @@ body.dark-theme {
 
 /***** breakpoints ****/
 
-@media screen and (max-width: 350px) {
-  .section {
-    padding-block: 1.5rem;
-  }
-  .skills__info {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 1.5rem;
-  }
-}
-
 @media screen and (max-width: 767px) {
+  .nav__logo::after {
+    left: 3px;
+  }
   .container {
     max-width: 100%;
     margin: auto;
   }
   .home__container {
+    row-gap: 2.5rem;
     padding-top: 0;
     padding-inline: 1rem;
   }
@@ -1302,13 +1305,42 @@ body.dark-theme {
   }
 }
 
+@media screen and (max-width: 350px) {
+  .section {
+    padding-block: 1.5rem;
+  }
+  .skills__info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+  div[class*="__container"] {
+    padding-inline: 0.5rem;
+    max-width: 95%;
+    margin: auto;
+  }
+  .home__container {
+    row-gap: 2rem;
+  }
+  .home__social-info > a {
+    padding: 0.75rem 1rem;
+  }
+  .home__profil {
+    width: 250px;
+    height: 255px;
+  }
+  .home__info:last-child {
+    gap: 0 0.5rem;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .home__container {
     grid-template-columns: repeat(3, 1fr);
   }
   .container {
     margin: auto;
-    max-width: calc(100% - 3rem);
+    max-width: 100%;
+    padding-inline: 3rem;
   }
 
   .home__data {
@@ -1417,7 +1449,7 @@ body.dark-theme {
     box-shadow: none;
     border-radius: unset;
     column-gap: 2rem;
-    padding: 0;
+    padding: 0 3rem;
   }
 
   .nav__toggle,
