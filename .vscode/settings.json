@@ -1,0 +1,10 @@
+{
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'JetBrains Mono','Droid Sans Mono', 'monospace', monospace",
+    "editor.lineHeight": 28,
+    "editor.fontSize": 16,
+    "prettier.useTabs": false,
+    "workbench.tree.indent": 16,
+    "editor.tabSize": 8,
+    "prettier.vueIndentScriptAndStyle": false,
+}
