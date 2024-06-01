@@ -156,7 +156,7 @@ const fadeObserver = new IntersectionObserver(entries => {
 })
 
 fadeObserver.observe(qualification_element);
-for(servicesCard of servicesCards){
+for (servicesCard of servicesCards) {
     fadeObserver.observe(servicesCard);
 }
 
@@ -170,10 +170,25 @@ const translationObserver = new IntersectionObserver(entries => {
         }
     })
 }, {
-    threshold: 0.33,
+    threshold: 0.3,
 });
 
 translationObserver.observe(skillContent);
+
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+        } else {
+            entry.target.classList.remove('reveal');
+        }
+    })
+}, {
+    threshold: 0.33,
+});
+
+const projectContainer = document.querySelector('#projects .projects__container');
+revealObserver.observe(projectContainer);
 
 // Dark and light theme
 const btnThemeToggler = document.querySelector("#toggle-mode");
@@ -181,9 +196,9 @@ const darkTheme = "dark-theme";
 
 const getCurrentTheme = () => document.body.classList.contains(darkTheme);
 
-const selectedTheme = localStorage.getItem('selected-theme');
+const selectedTheme = localStorage.getItem('dark-theme-set');
 
-if(selectedTheme){
+if (selectedTheme) {
     document.body.classList.add(darkTheme);
     btnThemeToggler.checked = true;
 }
@@ -191,5 +206,11 @@ if(selectedTheme){
 btnThemeToggler.addEventListener('click', () => {
     document.body.classList.toggle(darkTheme);
 
-    localStorage.setItem('selected-theme', getCurrentTheme);
+    setTimeout(() => {
+        if(btnThemeToggler.checked){
+            localStorage.setItem('dark-theme-set', getCurrentTheme());
+        }else{
+            localStorage.removeItem('dark-theme-set', getCurrentTheme());
+        }
+    },500);
 });

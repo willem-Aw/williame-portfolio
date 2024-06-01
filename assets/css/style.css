@@ -449,6 +449,10 @@ img {
   background-size: 15%;
 }
 
+body:not(.dark-theme) .home__blob::after{
+  opacity: 0.25;
+}
+
 .home__profil {
   position: relative;
   z-index: 3;
@@ -816,6 +820,14 @@ body.dark-theme .qualification__img {
 /***** Projects ****/
 .projects__container {
   overflow: initial;
+  opacity: 0;
+  translate: 0 -3rem;
+  transition: all 0.8s linear;
+}
+
+.projects__container.reveal {
+  opacity: 1;
+  translate: 0 0;
 }
 
 .project__content {
@@ -1005,7 +1017,7 @@ body.dark-theme .qualification__img {
 .contact__form-input:active,
 .contact__form-textarea:active,
 .contact__form-input:focus-visible,
-.contact__form-textarea:focus-visible  {
+.contact__form-textarea:focus-visible {
   color: inherit !important;
   background: inherit !important;
 }
@@ -1279,6 +1291,7 @@ body.dark-theme {
     row-gap: 2.5rem;
     padding-top: 0;
     padding-inline: 1rem;
+    grid-template-columns: repeat(1, 100%);
   }
   .home__title {
     font-size: calc(var(--big-font-size) + 0.5rem);
@@ -1342,6 +1355,13 @@ body.dark-theme {
   }
 }
 
+@media screen and (min-width: 700px) {
+  .services__container {
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 4rem;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 900px) {
   .home__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1408,8 +1428,7 @@ body.dark-theme {
     box-shadow: 0rem 0.5rem 1rem hsl(55, 0%, 0%);
   } */
 
-  .qualification__container,
-  .services__container {
+  .qualification__container {
     grid-template-columns: repeat(2, max-content);
     column-gap: 4rem;
     justify-content: center;
