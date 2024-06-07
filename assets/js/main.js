@@ -141,6 +141,23 @@ function setHeaderShadow() {
 window.addEventListener('scroll', setHeaderShadow)
 setHeaderShadow()
 
+// show and hide menu on scroll up/down
+let lastScrollPosition = 0;
+window.addEventListener("scroll", () => {
+    // Get the current scroll position
+    let currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition - lastScrollPosition > 0) {
+        // If the scroll direction is down and the user has scrolled past the navbar, hide the navbar
+        topHeader.classList.add("hide");
+    } else {
+        // If the scroll direction is up or the user is at the top of the page, show the navbar
+        topHeader.classList.remove("hide");
+    }
+    // Set the last scroll position to the current scroll position
+    lastScrollPosition = currentScrollPosition;
+})
+
 const qualification_element = document.querySelector('.qualification__container');
 const servicesCards = document.querySelectorAll('#services .services__card');
 const fadeObserver = new IntersectionObserver(entries => {
@@ -179,15 +196,15 @@ const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('reveal');
-        } else {
-            entry.target.classList.remove('reveal');
+            revealObserver.unobserve(entry.target);
         }
     })
 }, {
-    threshold: 0.33,
+    threshold: 0.3,
+    rootMargin: '-30px 0px -30px 0px'
 });
 
-const projectContainer = document.querySelector('#projects .projects__container');
+const projectContainer = document.querySelector('#projects');
 revealObserver.observe(projectContainer);
 
 // Dark and light theme
@@ -207,10 +224,10 @@ btnThemeToggler.addEventListener('click', () => {
     document.body.classList.toggle(darkTheme);
 
     setTimeout(() => {
-        if(btnThemeToggler.checked){
+        if (btnThemeToggler.checked) {
             localStorage.setItem('dark-theme-set', getCurrentTheme());
-        }else{
+        } else {
             localStorage.removeItem('dark-theme-set', getCurrentTheme());
         }
-    },500);
+    }, 500);
 });
