@@ -1,12 +1,12 @@
-import { translationObserver, setHeaderShadow, fadeObserver, revealObserver, validate_email, toggleDarkMode } from './fonctions/fonctions.js';
+// import { IntersectionObservers, translationObserver, setHeaderShadow, fadeObserver, revealObserver, validate_email, toggleDarkMode } from './fonctions/fonctions.js';
+import { CustomObserver, handleSectionIntersect, handleScrollUpIntersect, setHeaderShadow, validate_email, toggleDarkMode } from './fonctions/fonctions.js';
 
-const skillContent = document.querySelector('#skills .skills__container');
-const projectContainer = document.querySelector('#projects');
 const btnThemeToggler = document.querySelector("#toggle-mode");
 const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
-const navLink = document.querySelectorAll('.nav__link')
+const navLinks = document.querySelectorAll('.nav__link')
+const allSections = document.querySelectorAll('section[id]');
 /**Contact form */
 const contactForm = document.querySelector('#contact-form'),
     senderName = document.querySelector('#contact-form-name'),
@@ -14,11 +14,13 @@ const contactForm = document.querySelector('#contact-form'),
     senderMessage = document.querySelector('#contact-form-message'),
     report = document.querySelector('#contact-report'),
     btnSend = document.querySelector('#contact-form-submit');
-const qualification_element = document.querySelector('.qualification__container');
-const servicesCards = document.querySelectorAll('#services .services__card');
 const mainContent = document.querySelector('#main');
 const topHeader = document.querySelector('#header');
-const sections = document.querySelectorAll('section[id]');
+/**Elements to observe */
+const skillContent = document.querySelector('#skills .skills__container');
+const qualification_element = document.querySelector('.qualification__container');
+const projects_elements = document.querySelectorAll('#projects .projects__container .project__content');
+const servicesCards = document.querySelectorAll('#services .services__card');
 
 /**
  * initialize emailJs
@@ -50,39 +52,19 @@ const linkAction = () => {
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show-menu')
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLinks.forEach(n => n.addEventListener('click', linkAction))
 
-/**
- * 
- * highlight the active link of every section
- * when the section is in the viewport
- * show or hide go to the button
- */
-const scrollActive = () => {
-    const scrollDown = window.scrollY
+const sectionObserver = new IntersectionObserver(handleSectionIntersect, {
+    root: null,
+    threshold: 0.5,
+});
+allSections.forEach(section => sectionObserver.observe(section));
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 58,
-            sectionId = current.getAttribute('id'),
-            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']'),
-            scrollUp = document.querySelector('#scroll-up')
-
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link')
-        } else {
-            sectionsClass.classList.remove('active-link')
-        }
-
-        // scrollTop button show && hide
-        if (window.scrollY > 600) {
-            scrollUp.classList.add('show')
-        } else {
-            scrollUp.classList.remove('show')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+const scrollUpObserver = new IntersectionObserver(handleScrollUpIntersect, {
+    root: null,
+    threshold: 0,
+});
+scrollUpObserver.observe(allSections[0]);
 
 
 window.addEventListener('scroll', () => setHeaderShadow(topHeader, mainContent))
@@ -96,8 +78,8 @@ window.addEventListener("scroll", () => {
     // Get the current scroll position
     let currentScrollPosition = window.scrollY;
 
-    if (currentScrollPosition - lastScrollPosition > 0) {
-        topHeader.classList.add("hide");
+    if (currentScrollPosition > lastScrollPosition) {
+        // topHeader.classList.add("hide");
     } else {
         topHeader.classList.remove("hide");
     }
@@ -144,9 +126,22 @@ function sendMail(e) {
 }
 contactForm.addEventListener('submit', sendMail)
 
-translationObserver.observe(skillContent);
-revealObserver.observe(projectContainer);
-fadeObserver.observe(qualification_element);
-for (let servicesCard of servicesCards) {
-    fadeObserver.observe(servicesCard);
-}
+const configs = {
+    translation: {
+        threshold: 0.3
+    },
+    fade: {
+        threshold: 0.5
+    },
+    reveal: {
+        threshold: 0.2
+    }
+};
+
+const customObserver = new CustomObserver(configs);
+
+customObserver.observeElement(skillContent, 'translation');
+customObserver.observeElement(qualification_element, 'fade');
+customObserver.observeElement(qualification_element, 'fade');
+customObserver.observeElements(projects_elements, 'reveal');
+customObserver.observeElements(servicesCards, 'fade');
