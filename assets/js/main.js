@@ -126,6 +126,103 @@ function sendMail(e) {
 }
 contactForm.addEventListener('submit', sendMail)
 
+/* Scroll Event in project */
+document.addEventListener('DOMContentLoaded', function () {
+    const leftItems = document.querySelectorAll('#projects [data-left] [item]');
+    const rightItems = document.querySelectorAll('#projects [data-right] [item]');
+    const leftContainer = document.querySelector('#projects [data-left]');
+
+    // Function to update active item
+    function updateActiveItem() {
+        const containerRect = leftContainer.getBoundingClientRect();
+        const containerTop = containerRect.top;
+        const containerHeight = containerRect.height;
+
+        let closestItem = null;
+        let closestDistance = Infinity;
+        let closestIndex = -1;
+
+        // Find which item is closest to the middle of the viewport
+        leftItems.forEach((item, index) => {
+            const itemRect = item.getBoundingClientRect();
+            const itemMiddle = itemRect.top + (itemRect.height / 2);
+            const viewportMiddle = window.innerHeight / 2;
+            const distance = Math.abs(viewportMiddle - itemMiddle);
+
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestItem = item;
+                closestIndex = index;
+            }
+        });
+
+        // Update active class
+        if (closestItem) {
+            leftItems.forEach(item => item.classList.remove('active'));
+            closestItem.classList.add('active');
+
+            // Get the active item ID (1-based)
+            const activeItemId = parseInt(closestItem.getAttribute('data-leftitem'));
+
+            // Update right items with animation classes
+            updateRightItemsAnimation(activeItemId);
+        }
+    }
+
+    // Dynamic function to update right items animation
+    function updateRightItemsAnimation(activeItemId) {
+        const totalItems = rightItems.length;
+
+        rightItems.forEach(item => {
+            const itemId = parseInt(item.getAttribute('data-rightitem'));
+            item.classList.remove('prev', 'active', 'next');
+
+            if (itemId === activeItemId) {
+                item.classList.add('active');
+            }
+            // Handle previous item (with wrap-around)
+            else if (itemId === (activeItemId - 1 > 0 ? activeItemId - 1 : totalItems)) {
+                item.classList.add('prev');
+            }
+            // Handle next item (with wrap-around)
+            else if (itemId === (activeItemId + 1 <= totalItems ? activeItemId + 1 : 1)) {
+                item.classList.add('next');
+            }
+        });
+    }
+
+    // Initial setup
+    updateActiveItem();
+
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveItem);
+
+    // Also update on window resize
+    window.addEventListener('resize', updateActiveItem);
+
+    // Add click functionality to items
+    leftItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.stopPropagation();
+            // e.preventDefault();
+            // Scroll to make this item centered in the viewport
+            const itemTop = this.offsetTop;
+            const itemHeight = this.clientHeight;
+            const containerTop = leftContainer.offsetTop;
+
+            window.scrollTo({
+                top: containerTop + itemTop - (window.innerHeight / 2) + (itemHeight / 2),
+                behavior: 'smooth'
+            });
+            // debugger;
+            // item.scrollTo({
+            //     behavior: 'smooth',
+            //     top: 0
+            // });
+        });
+    });
+});
+
 const configs = {
     translation: {
         threshold: 0.3

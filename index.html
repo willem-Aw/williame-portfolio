@@ -1,537 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aristude Williame Portolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-  <body>
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">Williame</a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">
-                <i class="ri-home-5-line"></i> Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="ri-trophy-line"></i> Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#qualification" class="nav__link">
-                <i class="ri-book-open-line"></i> Qualification
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">
-                <i class="ri-briefcase-line"></i> Services
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#projects" class="nav__link">
-                <i class="ri-image-line"></i> Projects
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="ri-chat-3-line"></i> Contact
-              </a>
-            </li>
-          </ul>
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-line"></i>
-          </div>
-        </div>
-        <div class="nav__buttons">
-          <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
-          <!-- <i class="ri-sun-line"></i> -->
-          <input type="checkbox" id="toggle-mode" />
-          <label for="toggle-mode"></label>
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-4-line"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aristude Williame - Portolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
 
-    <main class="main" id="main">
-      <!-- home section -->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <!-- Home info 1 -->
-          <div class="home__info">
-            <h3 class="home__info-title">Web && Flutter Developper</h3>
-            <h1 class="home__title">
-              Hello, I'm <br />
-              <span>Aristude Williame</span>
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              tempore, placeat animi consequatur nostrum, distinctio mollitia
-              quaerat nisi facere quos nemo.
-            </p>
-            <div class="home__social-info flex">
-              <a href="#" id="download-resume"
-                >Download CV <i class="ri-download-2-line"></i
-              ></a>
-              <ul class="home__social">
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/aristude-williame/"
-                    target="_blank"
-                    class="home__social-link"
-                  >
-                    <i class="ri-linkedin-fill"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/willem-Aw"
-                    target="_blank"
-                    class="home__social-link"
-                  >
-                    <i class="ri-github-fill"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- <div>
-              <h3 class="home__info-title">BIOGRAPHY</h3>
-              <p class="home__info-description">
-                Hi, I'm Williame. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit.
-              </p>
-            </div>
-            <div>
-              <h3 class="home__info-title">CONTACT</h3>
-              <p class="home__info-description">
-                awwillem@gmail.com <br />
-                +261 32 65 304 16 <br />
-                +261 34 10 283 52
-              </p>
-            </div>
-            <div>
-              <h3 class="home__info-title">SERVICES</h3>
-              <p class="home__info-description">
-                Web Design <br />
-                UI/UX Design <br />
-              </p>
-            </div> -->
-          </div>
-          <div class="home__data grid">
-            <div class="home__blob grid">
-              <div class="home__profil">
-                <img src="./assets/images/ProfileWilliame.png" alt="profile" />
-              </div>
-            </div>
-          </div>
-          <!-- Home info 2 -->
-          <div class="home__info flex">
-            <div>
-              <p class="home__info-number">03</p>
-              <h3 class="home__info-title">
-                Years of<br />
-                Experiece
-              </h3>
-            </div>
-            <div>
-              <p class="home__info-number">10+</p>
-              <h3 class="home__info-title">
-                Completed<br />
-                Projects
-              </h3>
-            </div>
-            <div>
-              <p class="home__info-number">1</p>
-              <h3 class="home__info-title">
-                Companies<br />
-                Worked
-              </h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My best skills</span>
-        <div class="skills__container container grid">
-          <!-- sub section 1 -->
-          <div class="skills_content">
-            <h3 class="skills__title">
-              <i class="ri-braces-line"></i>
-              Frontend Developer
-            </h3>
-            <div class="skills__info">
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img src="./assets/images/html-1.svg" alt="skills image" />
-                </div>
-                <h3 class="skills__name">HTML</h3>
-                <span class="skills_subtile">Advanced</span>
-              </div>
-
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img src="./assets/images/css-3.svg" alt="skills image" />
-                </div>
-                <h3 class="skills__name">CSS</h3>
-                <span class="skills_subtile">Advanced</span>
-              </div>
-
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img
-                    src="./assets/images/logo-javascript.svg"
-                    alt="skills image"
-                  />
-                </div>
-                <h3 class="skills__name">Javascript</h3>
-                <span class="skills_subtile">Good</span>
-              </div>
-
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img src="./assets/images/git-icon.svg" alt="skills image" />
-                </div>
-                <h3 class="skills__name">Git</h3>
-                <span class="skills_subtile">Intermediate</span>
-              </div>
-            </div>
-          </div>
-          <!-- sub section 2 -->
-          <div class="skills_content">
-            <h3 class="skills__title">
-              <i class="ri-pantone-line"></i>
-              Web Designer
-            </h3>
-
-            <div class="skills__info">
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img
-                    src="./assets/images/adobe-xd-1.svg"
-                    alt="skills image"
-                  />
-                </div>
-                <h3 class="skills__name">Adobe XD</h3>
-                <span class="skills_subtile">Beginner</span>
-              </div>
-
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img src="./assets/images/figma-1.svg" alt="skills image" />
-                </div>
-                <h3 class="skills__name">Figma</h3>
-                <span class="skills_subtile">Beginner</span>
-              </div>
-
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img src="./assets/images/sketch-2.svg" alt="skills image" />
-                </div>
-                <h3 class="skills__name">Sketch</h3>
-                <span class="skills_subtile">Beginner</span>
-              </div>
-
-              <div class="skills__data">
-                <div class="skills__blob">
-                  <img
-                    src="./assets/images/adobe-photoshop-2.svg"
-                    alt="skills image"
-                  />
-                </div>
-                <h3 class="skills__name">Photoshop</h3>
-                <span class="skills_subtile">Beginner</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Qualification Section -->
-      <section class="qualification section" id="qualification">
-        <h2 class="section__title">Qualification</h2>
-        <span class="section__subtitle"> Experiences & educations </span>
-
-        <div class="qualification__container container grid">
-          <!-- Subsection 1 -->
-          <div class="qualification__content">
-            <h3 class="qualification__title">
-              <i class="ri-pencil-ruler-2-line"></i>Education
-            </h3>
-
-            <div class="qualification__info">
-              <div>
-                <h3 class="qualification__name">DTS - Genie Informatique</h3>
-                <span class="qualification__company">EPSI Madagascar</span>
-                <span class="qualification__year">2019-2020</span>
-              </div>
-
-              <div>
-                <h3 class="qualification__name">
-                  Licence - Genie Informatique
-                </h3>
-                <span class="qualification__company">E-Media Madagascar</span>
-                <span class="qualification__year">2022-2023</span>
-              </div>
-
-              <div>
-                <h3 class="qualification__name">Master</h3>
-                <span class="qualification__company">E-Media Madagascar</span>
-                <span class="qualification__year">In progress</span>
-              </div>
-            </div>
-          </div>
-          <!-- Subsection 2 -->
-          <div class="qualification__content">
-            <h3 class="qualification__title">
-              <i class="ri-briefcase-line"></i>Experiences
-            </h3>
-
-            <div class="qualification__info">
-              <div>
-                <h3 class="qualification__name">
-                  Intégrateur Web (HTML, CSS, JS, Wordpress, Prestashop)
-                </h3>
-                <span class="qualification__company"
-                  >Allbyweb - Madagascar</span
-                >
-                <span class="qualification__year">2021-now</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <img
-          src="./assets/images/shape-circle.svg"
-          alt="qualification image circle"
-          class="qualification__img"
-        />
-      </section>
-
-      <!-- services section -->
-      <section class="services section" id="services">
-        <h2 class="section__title">Service</h2>
-        <span class="section__subtitle">What I offer</span>
-
-        <div class="services__container grid container">
-          <div class="services__card">
-            <i class="ri-layout-4-line"></i>
-            <h2 class="services__title">UI/UX <br />Designer</h2>
-            <p class="services__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusamus, magni. adipisicing elit. Accusamus, magni.
-            </p>
-            <div class="services__border"></div>
-          </div>
-
-          <div class="services__card">
-            <i class="ri-code-s-slash-line"></i>
-            <h2 class="services__title">Website <br />Design</h2>
-            <p class="services__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusamus, magni. Rem aspernatur, non repellendus omnis pariatur
-              ipsa.
-            </p>
-
-            <div class="services__border"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- services section -->
-      <section class="projects section" id="projects">
-        <h2 class="section__title">Projects</h2>
-        <span class="section__subtitle">What I have done</span>
-
-        <div class="container">
-          <div class="projects__container">
-            <!-- subsection 1 -->
-            <div class="project__content">
-              <div class="product__img-container">
-                <img
-                    src="./assets/images/project1.jpg"
-                    alt="Project 1"
-                    class="projets__img"
-                    width="430"
-                    height="300"
-                  />
-              </div>
-              <div>
-                <span class="project__subtitle">Project 1</span>
-                <h2 class="projects__title">Project 1 Title</h2>
-
-                <a href="#" class="project__button"
-                  >View Demo <i class="ri-arrow-right-line"></i
-                ></a>
-              </div>
-            </div>
-
-            <!-- subsection 2 -->
-            <div class="project__content">
-              <div class="product__img-container">
-                <img
-                    src="./assets/images/project2.jpg"
-                    alt="Project 2"
-                    class="projets__img"
-                    width="430"
-                    height="300"
-                  />
-              </div>
-              <div>
-                <span class="project__subtitle">Project 2</span>
-                <h2 class="projects__title">Project 2 Title</h2>
-
-                <a href="#" class="project__button"
-                  >View Demo <i class="ri-arrow-right-line"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- contact section -->
-      <section class="contact section" id="contact">
-        <h2 class="section__title">Contact Me</h2>
-        <span class="section__subtitle">Get in touch</span>
-
-        <div class="contact__container container grid">
-          <div class="contact__content">
-            <h3 class="contact__title">
-              <i class="ri-chat-1-line"></i> Talk to me
-            </h3>
-
-            <div class="contact__info">
-              <div class="contact__data">
-                <span class="contact__data-title">Email : </span>
-                <a href="#" target="_blank" class="contact__data-link"
-                  >awwillem@gmail.com</a
-                >
-              </div>
-
-              <div class="contact__data">
-                <span class="contact__data-title">Whatsapp : </span>
-                <a href="#" target="_blank" class="contact__data-link"
-                  >+261 32 65 304 16</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="contact__content">
-            <h3 class="contact__title">
-              <i class="ri-discuss-line"></i> Message Me Directly
-            </h3>
-            <form action="" class="contact__form" id="contact-form">
-              <div class="contact__form-group">
-                <label class="contact__form-tag">Name</label>
-                <input
-                  type="text"
-                  name="user_name"
-                  required
-                  placeholder="username"
-                  class="contact__form-input"
-                  id="contact-form-name"
-                />
-              </div>
-
-              <div class="contact__form-group">
-                <label class="contact__form-tag">Mail</label>
-                <input
-                  type="email"
-                  name="user_email"
-                  required
-                  placeholder="email"
-                  class="contact__form-input"
-                  id="contact-form-email"
-                />
-              </div>
-
-              <div class="contact__form-group contact__form-area">
-                <label class="contact__form-tag">Message</label>
-                <textarea
-                  name="message"
-                  class="contact__form-textarea"
-                  placeholder="Write any message"
-                  required
-                  id="contact-form-message"
-                ></textarea>
-              </div>
-
-              <p class="contact__report" id="contact-report"></p>
-
-              <button
-                class="contact__form-submit"
-                id="contact-form-submit"
-                type="submit"
-              >
-                Submit <i class="ri-arrow-right-up-line"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- contact section -->
-    <footer class="footer" id="footer">
-      <div class="footer__container container">
-        <h1 class="footer__title">Williame</h1>
-        <p>Frontend Developer</p>
-
-        <ul class="footer__list">
-          <li>
-            <a href="#home" class="footer__link">Home</a>
-          </li>
-
-          <li>
-            <a href="#skills" class="footer__link">Skills</a>
-          </li>
-
-          <li>
-            <a href="#projects" class="footer__link">Projects</a>
-          </li>
-        </ul>
-
-        <ul class="footer__social">
-          <li>
-            <a href="#" target="_blank" class="footer__social-link">
-              <i class="ri-linkedin-box-line"></i>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Williame</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">
+              <i class="ri-home-5-line"></i> Home
             </a>
           </li>
-
-          <li>
-            <a href="#" target="_blank" class="footer__social-link">
-              <i class="ri-github-fill"></i>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">
+              <i class="ri-trophy-line"></i> Skills
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#qualification" class="nav__link">
+              <i class="ri-book-open-line"></i> Qualification
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">
+              <i class="ri-briefcase-line"></i> Services
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">
+              <i class="ri-image-line"></i> Projects
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">
+              <i class="ri-chat-3-line"></i> Contact
             </a>
           </li>
         </ul>
-
-        <p class="footer__copyright">
-          <i class="ri-copyright-line"></i>
-          ARISTUDE Williame
-        </p>
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
       </div>
-    </footer>
+      <div class="nav__buttons">
+        <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+        <!-- <i class="ri-sun-line"></i> -->
+        <input type="checkbox" id="toggle-mode" />
+        <label for="toggle-mode"></label>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-4-line"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Go top Button -->
-    <a href="#home" class="scrollup" id="scroll-up">
-      <i class="ri-arrow-up-double-line"></i>
-    </a>
+  <main class="main" id="main">
+    <!-- home section -->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <!-- Home info 1 -->
+        <div class="home__info">
+          <h3 class="home__info-title">Web && Flutter Developper</h3>
+          <h1 class="home__title">
+            Hello, I'm <br />
+            <span>Aristude Williame</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            tempore, placeat animi consequatur nostrum, distinctio mollitia
+            quaerat nisi facere quos nemo.
+          </p>
+          <div class="home__social-info flex">
+            <a href="#" id="download-resume">Download CV <i class="ri-download-2-line"></i></a>
+            <ul class="home__social">
+              <li>
+                <a href="https://www.linkedin.com/in/aristude-williame/" target="_blank" class="home__social-link">
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/willem-Aw" target="_blank" class="home__social-link">
+                  <i class="ri-github-fill"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="home__data grid">
+          <div class="home__blob grid">
+            <div class="home__profil">
+              <img src="./assets/images/ProfileWilliame.png" alt="profile" />
+            </div>
+          </div>
+        </div>
+        <!-- Home info 2 -->
+        <div class="home__info flex">
+          <div>
+            <p class="home__info-number">03</p>
+            <h3 class="home__info-title">
+              Years of<br />
+              Experiece
+            </h3>
+          </div>
+          <div>
+            <p class="home__info-number">10+</p>
+            <h3 class="home__info-title">
+              Completed<br />
+              Projects
+            </h3>
+          </div>
+          <div>
+            <p class="home__info-number">1</p>
+            <h3 class="home__info-title">
+              Companies<br />
+              Worked
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="./assets/js/main.js" type="module"></script>
-  </body>
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <span class="section__subtitle">My best skills</span>
+      <div class="skills__container container grid">
+        <!-- sub section 1 -->
+        <div class="skills_content">
+          <h3 class="skills__title">
+            <i class="ri-braces-line"></i>
+            Frontend Developer
+          </h3>
+          <div class="skills__info">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/html-1.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">HTML</h3>
+              <span class="skills_subtile">Advanced</span>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/css-3.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">CSS</h3>
+              <span class="skills_subtile">Advanced</span>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/logo-javascript.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Javascript</h3>
+              <span class="skills_subtile">Good</span>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/git-icon.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Git</h3>
+              <span class="skills_subtile">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <!-- sub section 2 -->
+        <div class="skills_content">
+          <h3 class="skills__title">
+            <i class="ri-pantone-line"></i>
+            Web Designer
+          </h3>
+
+          <div class="skills__info">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/adobe-xd-1.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Adobe XD</h3>
+              <span class="skills_subtile">Beginner</span>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/figma-1.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Figma</h3>
+              <span class="skills_subtile">Beginner</span>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/sketch-2.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Sketch</h3>
+              <span class="skills_subtile">Beginner</span>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="./assets/images/adobe-photoshop-2.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Photoshop</h3>
+              <span class="skills_subtile">Beginner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qualification Section -->
+    <section class="qualification section" id="qualification">
+      <h2 class="section__title">Qualification</h2>
+      <span class="section__subtitle"> Experiences & educations </span>
+
+      <div class="qualification__container container grid">
+        <!-- Subsection 1 -->
+        <div class="qualification__content">
+          <h3 class="qualification__title">
+            <i class="ri-pencil-ruler-2-line"></i>Education
+          </h3>
+
+          <div class="qualification__info">
+            <div>
+              <h3 class="qualification__name">Master</h3>
+              <span class="qualification__company">E-Media Madagascar</span>
+              <span class="qualification__year">In progress</span>
+            </div>
+
+            <div>
+              <h3 class="qualification__name">
+                Licence - Genie Informatique
+              </h3>
+              <span class="qualification__company">E-Media Madagascar</span>
+              <span class="qualification__year">2022-2023</span>
+            </div>
+
+            <div>
+              <h3 class="qualification__name">DTS - Genie Informatique</h3>
+              <span class="qualification__company">EPSI Madagascar</span>
+              <span class="qualification__year">2019-2020</span>
+            </div>
+
+          </div>
+        </div>
+        <!-- Subsection 2 -->
+        <div class="qualification__content">
+          <h3 class="qualification__title">
+            <i class="ri-briefcase-line"></i>Experiences
+          </h3>
+
+          <div class="qualification__info">
+            <div>
+              <h3 class="qualification__name">
+                Intégrateur Web (HTML, CSS, JS, Wordpress, Prestashop)
+              </h3>
+              <span class="qualification__company">Allbyweb - Madagascar</span>
+              <span class="qualification__year">2021-now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="./assets/images/shape-circle.svg" alt="qualification image circle" class="qualification__img" />
+    </section>
+
+    <!-- services section -->
+    <section class="services section" id="services">
+      <h2 class="section__title">Service</h2>
+      <span class="section__subtitle">What I offer</span>
+
+      <div class="services__container grid container">
+        <div class="services__card">
+          <i class="ri-layout-4-line"></i>
+          <h2 class="services__title">UI/UX <br />Designer</h2>
+          <p class="services__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusamus, magni. adipisicing elit. Accusamus, magni.
+          </p>
+          <div class="services__border"></div>
+        </div>
+
+        <div class="services__card">
+          <i class="ri-code-s-slash-line"></i>
+          <h2 class="services__title">Website <br />Design</h2>
+          <p class="services__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusamus, magni. Rem aspernatur, non repellendus omnis pariatur
+            ipsa.
+          </p>
+
+          <div class="services__border"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section -->
+    <section class="projects section" id="projects">
+      <h2 class="section__title">Projects</h2>
+      <span class="section__subtitle">What I have done</span>
+
+      <div class="container">
+        <div class="project-list-wrapper">
+          <div data-left>
+            <div data-leftItem="1" item class="active">
+              <h3>Travel to Paris 1</h3>
+              <p>Paris, the City of Light, is renowned for its art, fashion, gastronomy, and culture. The city's
+                19th-century urban planning, wide boulevards, and the River Seine make it one of the most
+                beautiful cities in the world.</p>
+              <p>Visit the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, and enjoy a cruise along the Seine.
+                Don't forget to try authentic French pastries at a local boulangerie.</p>
+              <a href="#" target="_blank" class="btn-primary btn-sm" rel="noopener noreferrer">
+                See details
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+            <div data-leftItem="2" item>
+              <h3>Travel to New York 2</h3>
+              <p>New York City, the Big Apple, is a bustling metropolis known for its iconic skyline, diverse
+                culture, and endless energy. From Broadway shows to world-class museums, there's always
+                something to explore.</p>
+              <p>See the Statue of Liberty, walk through Central Park, experience Times Square, and enjoy the view
+                from the Top of the Rock observation deck. The city that never sleeps offers unforgettable
+                experiences.</p>
+              <a href="#" target="_blank" class="btn-primary btn-sm" rel="noopener noreferrer">
+                See details
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+            <div data-leftItem="3" item>
+              <h3>Travel to London 3</h3>
+              <p>London, the capital of England, is a vibrant blend of history and modernity. With its royal
+                palaces, ancient monuments, and thriving arts scene, London offers something for every traveler.
+              </p>
+              <p>Explore the Tower of London, see the Changing of the Guard at Buckingham Palace, visit the
+                British Museum, and ride the London Eye for spectacular views of the city skyline.</p>
+              <a href="#" target="_blank" class="btn-primary btn-sm" rel="noopener noreferrer">
+                See details
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+            <div data-leftItem="4" item>
+              <h3>Travel to London 4</h3>
+              <p>London, the capital of England, is a vibrant blend of history and modernity. With its royal
+                palaces, ancient monuments, and thriving arts scene, London offers something for every traveler.
+              </p>
+              <p>Explore the Tower of London, see the Changing of the Guard at Buckingham Palace, visit the
+                British Museum, and ride the London Eye for spectacular views of the city skyline.</p>
+              <a href="#" target="_blank" class="btn-primary btn-sm" rel="noopener noreferrer">
+                See details
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+          <div data-right>
+            <div>
+              <div data-rightItem="1" item class="active">
+                <figure>
+                  <img src="./assets/images/project1.jpg" alt="Paris, France" width="500" height="250">
+                </figure>
+              </div>
+              <div data-rightItem="2" item>
+                <figure>
+                  <img src="assets/images/project2.jpg" alt="New York, USA" width="500" height="250">
+                </figure>
+              </div>
+              <div data-rightItem="3" item>
+                <figure>
+                  <img src="./assets/images/project3.jpg" alt="London, UK" width="500" height="250">
+                </figure>
+              </div>
+              <div data-rightItem="4" item class="active">
+                <figure>
+                  <img src="./assets/images/project4.jpg" alt="Paris, France" width="500" height="250">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="projects__container">
+
+        </div> -->
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Contact Me</h2>
+      <span class="section__subtitle">Get in touch</span>
+
+      <div class="contact__container container grid">
+        <div class="contact__content">
+          <h3 class="contact__title">
+            <i class="ri-chat-1-line"></i> Talk to me
+          </h3>
+
+          <div class="contact__info">
+            <div class="contact__data">
+              <span class="contact__data-title">Email : </span>
+              <a href="#" target="_blank" class="contact__data-link">awwillem@gmail.com</a>
+            </div>
+
+            <div class="contact__data">
+              <span class="contact__data-title">Whatsapp : </span>
+              <a href="#" target="_blank" class="contact__data-link">+261 32 65 304 16</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__content">
+          <h3 class="contact__title">
+            <i class="ri-discuss-line"></i> Message Me Directly
+          </h3>
+          <form action="" class="contact__form" id="contact-form">
+            <div class="contact__form-group">
+              <label class="contact__form-tag">Name</label>
+              <input type="text" name="user_name" required placeholder="username" class="contact__form-input"
+                id="contact-form-name" />
+            </div>
+
+            <div class="contact__form-group">
+              <label class="contact__form-tag">Mail</label>
+              <input type="email" name="user_email" required placeholder="email" class="contact__form-input"
+                id="contact-form-email" />
+            </div>
+
+            <div class="contact__form-group contact__form-area">
+              <label class="contact__form-tag">Message</label>
+              <textarea name="message" class="contact__form-textarea" placeholder="Write any message" required
+                id="contact-form-message"></textarea>
+            </div>
+
+            <p class="contact__report" id="contact-report"></p>
+
+            <button class="contact__form-submit" id="contact-form-submit" type="submit">
+              Submit <i class="ri-arrow-right-up-line"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- contact section -->
+  <footer class="footer" id="footer">
+    <div class="footer__container container">
+      <h1 class="footer__title">Williame</h1>
+      <p>Frontend Developer</p>
+
+      <ul class="footer__list">
+        <li>
+          <a href="#home" class="footer__link">Home</a>
+        </li>
+
+        <li>
+          <a href="#skills" class="footer__link">Skills</a>
+        </li>
+
+        <li>
+          <a href="#projects" class="footer__link">Projects</a>
+        </li>
+      </ul>
+
+      <ul class="footer__social">
+        <li>
+          <a href="#" target="_blank" class="footer__social-link">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" target="_blank" class="footer__social-link">
+            <i class="ri-github-fill"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__copyright">
+        <i class="ri-copyright-line"></i>
+        ARISTUDE Williame
+      </p>
+    </div>
+  </footer>
+
+  <!-- Go top Button -->
+  <a href="#home" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-double-line"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
 </html>
