@@ -656,7 +656,7 @@ body:not(.dark-theme) .home__blob::after {
 /***** Skills ****/
 
 .skills__container {
-  row-gap: 3.5rem;
+  grid-template-columns: 1fr;
 }
 
 .skills__title {
@@ -700,18 +700,20 @@ body:not(.dark-theme) .home__blob::after {
 }
 
 .skills__info {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem 2rem;
+  /* grid-template-columns: repeat(7, 1fr); */
+  grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+  gap: 1rem;
 }
 
 .skills__data {
   justify-content: center;
   text-align: center;
+  place-items: center;
 }
 
 .skills__blob {
-  width: 80px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: var(--container-color);
   border-radius: 3rem;
   place-items: center;
@@ -899,6 +901,7 @@ body.dark-theme .qualification__img {
   --flag-width: 40px;
   --left-item-padding: 12px;
   --sticky-top: 5rem;
+  --prj-wrapper-gap: 20px;
 
   position: relative;
 }
@@ -908,9 +911,9 @@ body.dark-theme .qualification__img {
 
 .project-list-wrapper {
   display: grid;
-  /* gap: 30px; */
-  padding: 30px;
-  grid-template-columns: 45% 45%;
+  gap: var(--prj-wrapper-gap);
+  padding-inline: var(--prj-wrapper-gap);
+  grid-template-columns: calc(50% var(--prj-wrapper-gap)) calc(50% var(--prj-wrapper-gap));
   grid-template-areas: "left right";
 
   div[item] {
@@ -976,7 +979,7 @@ body.dark-theme .qualification__img {
 
       &::before {
         inset: 0 0 0 calc(var(--left-item-padding) + 4px);
-        z-index: var(--z-higher);
+        z-index: 2;
         border-radius: initial;
         background: transparent;
       }
@@ -1644,7 +1647,7 @@ body.dark-theme {
 
   .project-list-wrapper {
     --right-figure-height: 250px;
-    padding-block: 15px;
+    padding-inline: var(--prj-wrapper-gap);
   }
 
   .project__content {
@@ -1760,10 +1763,10 @@ body.dark-theme {
     justify-content: start;
   }
 
-  .skills__container {
+  /* .skills__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 6rem;
-  }
+  } */
 
   .skills_content {
     position: relative;
