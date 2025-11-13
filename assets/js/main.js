@@ -106,7 +106,8 @@ function sendMail(e) {
         report.classList.add('error')
         report.classList.add('show')
     } else {
-        emailjs.sendForm('service_2l932je', 'template_o69ay3u', '#contact-form').then(() => {
+        // emailjs.sendForm('service_2l932je', 'template_o69ay3u', '#contact-form').then(() => {
+        emailjs.sendForm('service_t738uba', 'template_o69ay3u', '#contact-form').then(() => {
             report.classList.remove('error')
             report.classList.add('show')
             report.innerText = "Success"
