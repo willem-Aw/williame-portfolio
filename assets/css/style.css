@@ -390,7 +390,7 @@ img {
 .home__title+p {
   display: block;
   text-align: center;
-  font-size: var(--tiny-font-size);
+  font-size: var(--medium-font-size);
   line-height: 1.2;
   letter-spacing: 0.1rem;
   font-weight: var(--font-light);
@@ -701,7 +701,7 @@ body:not(.dark-theme) .home__blob::after {
 
 .skills__info {
   /* grid-template-columns: repeat(7, 1fr); */
-  grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
 }
 
