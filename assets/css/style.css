@@ -962,7 +962,7 @@ body.dark-theme .qualification__img {
       border-radius: var(--r-border-radius);
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
-      cursor: pointer;
+      /* cursor: pointer; */
       position: relative;
 
       &::after {

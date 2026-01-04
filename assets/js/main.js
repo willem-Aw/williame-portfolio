@@ -202,26 +202,26 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', updateActiveItem);
 
     // Add click functionality to items
-    leftItems.forEach(item => {
-        item.addEventListener('click', function (e) {
-            e.stopPropagation();
-            // e.preventDefault();
-            // Scroll to make this item centered in the viewport
-            const itemTop = this.offsetTop;
-            const itemHeight = this.clientHeight;
-            const containerTop = leftContainer.offsetTop;
+    // leftItems.forEach(item => {
+    //     item.addEventListener('click', function (e) {
+    //         e.stopPropagation();
+    //         // e.preventDefault();
+    //         // Scroll to make this item centered in the viewport
+    //         const itemTop = this.offsetTop;
+    //         const itemHeight = this.clientHeight;
+    //         const containerTop = leftContainer.offsetTop;
 
-            window.scrollTo({
-                top: containerTop + itemTop - (window.innerHeight / 2) + (itemHeight / 2),
-                behavior: 'smooth'
-            });
-            // debugger;
-            // item.scrollTo({
-            //     behavior: 'smooth',
-            //     top: 0
-            // });
-        });
-    });
+    //         window.scrollTo({
+    //             top: containerTop + itemTop - (window.innerHeight / 2) + (itemHeight / 2),
+    //             behavior: 'smooth'
+    //         });
+    //         // debugger;
+    //         // item.scrollTo({
+    //         //     behavior: 'smooth',
+    //         //     top: 0
+    //         // });
+    //     });
+    // });
 });
 
 const configs = {
