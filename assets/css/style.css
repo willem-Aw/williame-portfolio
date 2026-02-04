@@ -31,7 +31,8 @@
   --light-container-color: #edf1ec;
   --title-color: #212a21;
   --text-color: #2e3944;
-  --text-light-color: #212a21a4;
+  /* --text-light-color: #212a21a4; */
+  --text-light-color: #595959;
   --gradient-color: linear-gradient(180deg, var(--body-color), #748d92);
 
   --animation-duration: 0.4s;
