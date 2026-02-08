@@ -104,6 +104,10 @@ img {
   height: auto;
 }
 
+svg {
+  width: var(--normal-font-size);
+}
+
 .btn-primary {
   outline: unset;
   width: max-content;
@@ -281,6 +285,12 @@ img {
   font-size: var(--smaller-font-size);
   color: var(--text-light-color);
   transition: color calc(calc(var(--animation-duration) - 0.1s));
+
+  @media screen and (min-width: 1000px) {
+    svg {
+      display: none;
+    }
+  }
 }
 
 .nav__link:hover {
@@ -1514,7 +1524,7 @@ section:not(#projects) {
 @media screen and (max-width: 1023px) {
   .nav__menu {
     position: absolute;
-    width: 90%;
+    width: 100%;
     left: 0;
     right: 0;
     bottom: -10rem;
