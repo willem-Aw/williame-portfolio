@@ -1602,6 +1602,13 @@ body.dark-theme {
   --container-color-lighten: #2a4d6c;
 }
 
+/* button and anchor focus-visible */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--text-color, currentColor) !important; 
+  outline-offset: 2px;
+}
+
 /***** breakpoints ****/
 
 @media screen and (max-width: 1000px) {
