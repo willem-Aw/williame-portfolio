@@ -383,6 +383,10 @@ svg {
   bottom: 0;
   opacity: 1;
   visibility: visible;
+
+  button#nav-close {
+    display: flex;
+  }
 }
 
 /* active link */
@@ -1521,10 +1525,11 @@ section:not(#projects) {
   background-color: hsl(207, 4%, 55%);
 }
 
-button#nav-toggle, button#nav-close {
+button#nav-toggle,
+button#nav-close {
   background: transparent;
   width: calc(var(--normal-font-size) + 0.825rem);
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
