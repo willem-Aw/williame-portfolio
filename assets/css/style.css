@@ -303,8 +303,8 @@ svg {
 
 .nav__close {
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.7rem;
+  right: 1.5rem;
+  bottom: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -1521,6 +1521,14 @@ section:not(#projects) {
   background-color: hsl(207, 4%, 55%);
 }
 
+button#nav-toggle, button#nav-close {
+  background: transparent;
+  width: calc(var(--normal-font-size) + 0.825rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1023px) {
   .nav__menu {
     position: absolute;
@@ -1605,7 +1613,7 @@ body.dark-theme {
 /* button and anchor focus-visible */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--text-color, currentColor) !important; 
+  outline: 2px solid var(--text-color, currentColor) !important;
   outline-offset: 2px;
 }
 
@@ -1614,13 +1622,19 @@ a:focus-visible {
 @media screen and (max-width: 1000px) {
   .project-list-wrapper {
     --sticky-top: 0;
-    --right-figure-height: 250px;
+    --right-figure-height: 350px;
     gap: 0;
 
     /* grid-template-columns: 50px 1fr 1fr; */
     grid-template-columns: 1fr;
 
+    grid-template-areas:
+      "right"
+      "left";
+
+
     div[data-left] {
+      padding: 0;
       grid-column: 1 / -1;
       position: relative;
 
@@ -1628,7 +1642,8 @@ a:focus-visible {
         content: "";
         inset: 0 0 auto;
         width: 100%;
-        height: calc(var(--right-figure-height) + calc(var(--right-figure-height) / 5));
+        /* height: calc(var(--right-figure-height) + calc(var(--right-figure-height) / 5)); */
+        height: 3.5rem;
         display: block;
         background: var(--body-color);
         position: sticky;
@@ -1643,6 +1658,8 @@ a:focus-visible {
     div[data-right] {
       grid-column: 1 / -1;
       z-index: var(--z-highest);
+      position: sticky;
+      top: 0rem;
 
       &>div {
         grid-template-rows: calc(var(--right-figure-height) / 10) 1fr;
@@ -1694,6 +1711,22 @@ a:focus-visible {
   .project-list-wrapper {
     --right-figure-height: 250px;
     padding-inline: var(--prj-wrapper-gap);
+    grid-template-areas:
+      "right"
+      "left";
+
+    div[data-right] {
+      position: sticky;
+      top: 0rem;
+    }
+
+    div[data-left] {
+      padding: 0;
+
+      &::before {
+        height: 3.5rem;
+      }
+    }
   }
 
   .project__content {
